@@ -1,6 +1,6 @@
 package com.test;
 
-class textFormater { 
+class staticTextFormater { 
    
   	static void printFormat(script, String intext, String color) {   
     
