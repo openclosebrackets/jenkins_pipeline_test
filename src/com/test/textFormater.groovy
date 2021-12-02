@@ -6,17 +6,15 @@ class textFormater {
 		this.script = script
 	}
 	
-  	//void printFormat(String intext, String color) { 
-       	void printFormat() { 
-       		/*
+  	void printFormat(String intext, String color) {   
+		
 		result_in = "\033[31;42m"
 		result_out = "\033[0m"
 
 		result_in = "\033[31;42m"
 		result_out = "\033[0m"
 		script.echo   "${result_in} ${intext} ${result_out}"  	
-		*/
-		println "Hey!"
+		
   	}  
   
 }
