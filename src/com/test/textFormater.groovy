@@ -1,13 +1,12 @@
 package com.test;
 
 class textFormater { 
-  String color
   
 	textFormater(script) {
 		this.script = script
 	}
 	
-  	void printFormat(String intext) { 
+  	void printFormat(String intext, String color) { 
       switch(color) {
       case "red":
         result_in = "\033[31;42m"
