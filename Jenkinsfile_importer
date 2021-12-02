@@ -1,0 +1,19 @@
+@Library("pipline_shared_lib") 
+import com.test.*;
+
+pipeline {
+    agent any
+    options {
+        ansiColor('xterm')
+    }
+    stages {
+        stage('install') {
+            steps {
+                script{
+                    def calculator = new Calculator()
+                    println calculator.add(1,2) 
+                }
+            }
+        }
+    }
+}
