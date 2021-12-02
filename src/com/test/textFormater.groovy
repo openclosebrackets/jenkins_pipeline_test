@@ -1,7 +1,7 @@
 package com.test;
 
 class textFormater { 
-  
+   def script
 	textFormater(script) {
 		this.script = script
 	}
