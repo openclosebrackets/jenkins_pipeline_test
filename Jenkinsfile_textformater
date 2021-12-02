@@ -1,0 +1,21 @@
+@Library("pipline_shared_lib") 
+import com.test.*;
+
+pipeline {
+    agent any
+    options {
+        ansiColor('xterm')
+    }
+    stages {
+        stage('install') {
+            steps {
+                script{
+                    
+                    def textForm = new textFormater(this)
+                    textForm.printFormat("Colored Text!", "red")
+ 
+                }
+            }
+        }
+    }
+}
