@@ -1,0 +1,19 @@
+@Library("pipline_shared_lib") 
+import static com.test.staticTextFormater.*;
+
+pipeline {
+    agent any
+    options {
+        ansiColor('xterm')
+    }
+    stages {
+        stage('install') {
+            steps {
+                script{
+                    printMe(this,"Hello!","red" )
+                   
+                }
+            }
+        }
+    }
+}
