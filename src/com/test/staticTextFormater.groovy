@@ -3,7 +3,7 @@ package com.test;
 class textFormater { 
   
   def script
-	textFormater(script) {
+	staticTextFormater(script) {
 		this.script = script
 	}
 	
