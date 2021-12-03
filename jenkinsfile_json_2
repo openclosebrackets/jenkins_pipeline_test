@@ -1,0 +1,18 @@
+@Library("pipline_shared_lib") _
+import com.test.*
+
+def js = new readjs()
+def data = js.read_data("data.json")
+
+pipeline {
+    agent any
+    stages {
+        stage('init') {
+            steps {
+                script{
+                    echo "data name: ${data.name}"
+                }
+            }
+        }
+    }
+}
