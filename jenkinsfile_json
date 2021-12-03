@@ -1,0 +1,18 @@
+import groovy.json.JsonSlurperClassic
+@Library("pipline_shared_lib") _
+def json = libraryResource "data.json"                     
+def data = new JsonSlurperClassic().parseText(json)
+
+
+pipeline {
+    agent any
+    stages {
+        stage('init') {
+            steps {
+                script{
+                    echo "data name: ${data.name}"
+                }
+            }
+        }
+    }
+} 
