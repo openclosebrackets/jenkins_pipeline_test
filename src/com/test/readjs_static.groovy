@@ -1,5 +1,5 @@
 package com.test;
-import groovy.json.JsonSlurperClassic
+import static groovy.json.JsonSlurperClassic
 
 class readjs_static { 
   
