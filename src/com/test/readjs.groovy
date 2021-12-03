@@ -1,5 +1,5 @@
 import groovy.json.JsonSlurperClassic
-package com.test 
+package com.test;
 
 def read_data(String jsonFile)
 {
