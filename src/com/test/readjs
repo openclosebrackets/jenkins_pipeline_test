@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurperClassic
-import com.test 
+package com.test 
 
-def statc read_data(String jsonFile)
+def read_data(String jsonFile)
 {
     def json = libraryResource jsonFile                    
     def data = new JsonSlurperClassic().parseText(json)
