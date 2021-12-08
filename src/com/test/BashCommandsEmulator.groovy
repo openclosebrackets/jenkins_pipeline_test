@@ -1,39 +1,32 @@
 package com.test
 
 class BashCommandsEmulator {
-    def script
-    String ansi_start = "\033"
-    String ansi_stop = "\033[0m"
     
+    private static Map colorTable = ["black":"30","red":"31"]
+    def script
     
     BashCommandsEmulator(script)
     {
         this.script = script
     } 
     
-    // echo("text1 ","text 2 ")
-    void echo(String... texts)
+    // echo([color:"red",bold: true, underline: true],"text1 ","text 2 ")
+    void echo(Map format, String... texts)
     {
-        String color = "31"
-        boolean bold = false
-        boolean underline = false
+        if (format.color == null) format.color = "black"
+        if (format.bold == null) format.bold = false
+        if (format.underline == null) format.underline = false
         
-        String str = "${this.ansi_start}[${color}"
-        if (bold)
+        String str = "$\033[${colorTable[format.color as String]}"
+        if (format.bold)
         {
             str += ";1"
         }
-        if (underline)
+        if (format.underline)
         {
             str += ";4"
         }
-        str += "m${texts.join("")}${this.ansi_stop}" 
-        
-        
-        //String underline = "4"
-        
-        //example: "\033[31;1;4mHello\033[0m"
-        //String str = "${this.ansi_start}[${color};${bold};${underline}m${texts.join("")}${this.ansi_stop}"
+        str += "m${texts.join("")}\033[0m"  
         
         this.script.echo str
     } 
