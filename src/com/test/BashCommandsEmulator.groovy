@@ -38,7 +38,7 @@ class BashCommandsEmulator {
         if (!(format.color in colorTable.keySet())) format.color = "black"
         
         // ansi coloring 
-        String str = "\033[${colorTable[format.color as String]}"
+        String str = "\033[6;${colorTable[format.color as String]}"
         
         if (format.bold) str+=";1"
         
