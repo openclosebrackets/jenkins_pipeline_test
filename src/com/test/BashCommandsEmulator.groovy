@@ -51,5 +51,11 @@ class BashCommandsEmulator {
         
         this.script.echo str
     } 
+    
+    // Example echo("text1 ",[color:"red",bold: true, underline: true])
+    void echo(String text, Map format)
+    {
+         echo(format, text)
+    }
  
 }
