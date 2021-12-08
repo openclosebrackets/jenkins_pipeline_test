@@ -1,9 +1,16 @@
 package com.test
 
 class BashCommandsEmulator {
+    def script
     
-    static void bce_echo(def script, String text){
-        script.echo text 
+    BashCommandsEmulator(script)
+    {
+        this.script = script
     }
-
+    
+    void bce_echo(String text)
+    {
+        this.script.echo text 
+    }
+    
 }
