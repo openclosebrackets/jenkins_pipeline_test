@@ -42,7 +42,7 @@ class BashCommandsEmulator {
         
         if (format.bold) str+=";1"
         
-        if (format.backgroundColor in colorTable.keySet())) str+=";${colorTable[format.color as String] + 10}"
+        if (format.backgroundColor in colorTable.keySet()) str+=";${colorTable[format.color as String] + 10}"
         
         if (format.underline) str+=";4"
         
