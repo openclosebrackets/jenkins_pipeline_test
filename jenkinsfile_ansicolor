@@ -1,0 +1,27 @@
+@Library("pipline_shared_lib") 
+import com.test.*;
+
+pipeline 
+{
+    agent any
+    options 
+    {
+        ansiColor('xterm')
+    }
+    stages 
+    {
+        stage('init')
+        {
+            steps 
+            {
+                script
+                {
+                    def bce = new BashCommandsEmulator(this)
+                    bce.echo([color: "blue", backgroundColor: "red"],
+                            "this is a test1 ")
+
+                }
+            }
+        }
+    }
+}
