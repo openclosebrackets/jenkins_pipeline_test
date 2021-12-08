@@ -17,7 +17,7 @@ class BashCommandsEmulator {
         if (format.bold == null) format.bold = false
         if (format.underline == null) format.underline = false
         
-        String str = "$\033[${colorTable[format.color as String]}"
+        String str = "\033[${colorTable[format.color as String]}"
         if (format.bold)
         {
             str += ";1"
