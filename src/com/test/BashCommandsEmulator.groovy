@@ -9,6 +9,12 @@ class BashCommandsEmulator {
     {
         this.script = script
     } 
+       
+    // echo("text1 ","text 2 ")
+    void echo(String... texts)
+    {
+        this.script.echo texts.join("")
+    } 
     
     // echo([color:"red",bold: true, underline: true],"text1 ","text 2 ")
     void echo(Map format, String... texts)
