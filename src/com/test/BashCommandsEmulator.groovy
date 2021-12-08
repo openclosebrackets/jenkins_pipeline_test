@@ -2,7 +2,7 @@ package com.test
 
 class BashCommandsEmulator {
     
-    private static Map colorTable = ["black":"30","red":"31"]
+    Map colorTable = ["black":"30","red":"31"]
     def script
     
     BashCommandsEmulator(script)
