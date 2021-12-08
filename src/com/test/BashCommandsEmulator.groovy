@@ -8,7 +8,7 @@ class BashCommandsEmulator {
         this.script = script
     }
     
-    void bce_echo(String text)
+    void echo(String text)
     {
         this.script.echo text 
     }
